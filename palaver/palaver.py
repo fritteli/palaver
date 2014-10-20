@@ -13,6 +13,8 @@ from twisted.internet import defer
 from twisted.python import log, reflect
 from twisted.words.xish import domish
 
+from twisted.application import service
+
 try:
     from twisted.words.protocols.jabber.component import IService
 except:

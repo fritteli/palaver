@@ -386,7 +386,7 @@ def makeService(config):
     rs.setServiceParent(sm)
 
     if config['admin']==1:
-        bsc = g.AdminService()
+        bsc = muc.groupchat.AdminService()
         bsc.plugins = config['plugins']
         bsc.setServiceParent(bs)
         if len(sadmins)>0:

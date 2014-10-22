@@ -370,7 +370,7 @@ def makeService(config):
     c = IService(bs)
     c.setServiceParent(sm)
 
-    bsc = c.RoomService()
+    bsc = muc.groupchat.RoomService()
     bsc.plugins = config['plugins']
     bsc.create_rooms = config['create']
     if len(sadmins)>0:

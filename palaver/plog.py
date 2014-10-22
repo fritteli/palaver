@@ -201,8 +201,8 @@ class DailyLogger(logfile.DailyLogFile):
         self.size = self._file.tell()
         
 
-
-        
+# https://stackoverflow.com/questions/17074330/python-why-a-method-from-super-class-not-seen
+DailyLogger.__dict__ = dict( DailyLogger.__dict__.items() + DailyLogFile.__dict__.items() )
 threadable.synchronize(DailyLogger)
 
 class LogPublisher(log.LogPublisher):
